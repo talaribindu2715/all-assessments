@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MyLibrary</title>
+<link rel="stylesheet" href="library.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">📚 MyLibrary</div>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('books')">Books</a></li>
+      <li><a onclick="showPage('issued')">Issued</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+      <li><a onclick="showPage('login')" id="loginLink">Login</a></li>
+      <li><a onclick="showPage('signup')" id="signupLink">Signup</a></li>
+      <li><a onclick="logout()" id="logoutBtn" style="display:none;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="home" class="active hero">
+    <h1>Welcome to MyLibrary</h1>
+    <p>Your digital gateway to knowledge</p>
+    <button onclick="showPage('books')">Explore Books</button>
+  </section>
+
+  <section id="signup" class="form-section">
+    <h2>Create Account</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="semail" placeholder="Email">
+    <input id="spassword" type="password" placeholder="Password">
+    <button onclick="signup()">Register</button>
+    <p id="signupMsg"></p>
+  </section>
+
+  <section id="login" class="form-section">
+    <h2>Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </section>
+
+  <section id="books">
+    <h2>Available Books</h2>
+    <div id="bookList" class="grid"></div>
+  </section>
+
+  <section id="issued">
+    <h2>Issued Books</h2>
+    <div id="issuedList" class="grid"></div>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>MyLibrary is a modern digital platform that makes reading simple, accessible, and enjoyable.</p>
+  </section>
+
+  <section id="contact" class="form-section">
+    <h2>Contact Us</h2>
+    <input placeholder="Name">
+    <input placeholder="Email">
+    <textarea placeholder="Message"></textarea>
+    <button onclick="alert('Message sent!')">Send</button>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 MyLibrary | support@mylibrary.com</p>
+</footer>
+
+<script src="library.js"></script>
+</body>
+</html>
