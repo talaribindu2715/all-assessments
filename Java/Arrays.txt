@@ -1,0 +1,108 @@
+Arrays:
+Question 1: Frequency of Each Number
+import java.util.Scanner;
+public class Main{
+    public static void main(String[]args) {
+        Scanner sc=new Scanner(System.in);
+        int i,N,num;
+        N=sc.nextInt();
+        int[] freq=new int[N+1];
+        for(i=0;i<N;i++){
+            num=sc.nextInt();
+            freq[num]++;
+        }
+        for(i=1;i<=N;i++){
+            System.out.println(i+":"+freq[i]);
+        }
+    }
+}
+**Input:**  
+5  
+1 3 2 1 4  
+**Output:**  
+1: 2  
+2: 1  
+3: 1  
+4: 1  
+5: 0 
+
+Question 2: Count Distinct Numbers
+N=int(input())
+A=list(map(int,input().split()))
+distinct_numbers=set(A)
+print(len(distinct_numbers))
+**Input:**  
+5  
+1 2 1 3 1  
+**Output:**  
+3  
+
+Question 3: Find Maximum Element
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int N,i,sum=0,num;
+        N=sc.nextInt();
+        for(i=0;i<N;i++){
+            num=sc.nextInt();
+            if(num>0&&num%2!=0){
+                sum+=num;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+**Input:**  
+5  -2 -19 8 15 4  
+**Output:**  
+15 
+
+Question 4: Sum of Odd Elements
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int N,i;
+        N=sc.nextInt();
+        long sum=0,num;
+        for (i=0;i<N;i++){
+            num=sc.nextLong();
+            if (num%2!=0){
+                sum+=num;
+            }
+        }
+        System.out.println(sum);
+    }
+}
+**Input:**  
+5  
+6 9 8 4 3  
+**Output:**  
+12 
+
+Question 5: Find Duplicate Element
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner sc=new Scanner(System.in);
+        int N,i,j;
+        N=sc.nextInt();
+        int[] arr=new int[N];
+        for(i=0;i<N;i++){
+            arr[i]=sc.nextInt();
+        }
+        for(i=0;i<N;i++){
+            for(j=i+ 1;j<N;j++){
+                if(arr[i]==arr[j]){
+                    System.out.println(arr[i]);
+                }
+            }
+        }
+    }
+}
+**Input:**  
+6  
+5 4 10 9 21 10  
+**Output:**  
+10 
