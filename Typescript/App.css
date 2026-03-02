@@ -1,0 +1,118 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+body {
+  font-family: Arial;
+  background: #f7f3ef;
+  margin: 0;
+}
+
+.navbar {
+  background: #4e342e;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h2 {
+  color: #fff;
+}
+
+.navbar a {
+  color: #ffe0b2;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #ffcc80;
+}
+
+.page {
+  text-align: center;
+  padding: 40px;
+}
+
+.page img {
+  width: 300px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.page ul {
+  list-style: none;
+  padding: 0;
+}
+
+.page ul li {
+  background: #fff;
+  margin: 10px auto;
+  padding: 10px;
+  width: 260px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.page ul li:hover {
+  background: #ffe0b2;
+}
+
+input, textarea {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  width: 260px;
+}
+
+button {
+  background: #6d4c41;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5d4037;
+}

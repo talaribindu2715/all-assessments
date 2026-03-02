@@ -1,0 +1,46 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #6f4e37; /* coffee brown */
+  padding: 1rem 2rem;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbar h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.navbar div {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #ffb347; /* warm highlight */
+  transform: scale(1.05);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar div {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+}
