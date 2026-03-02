@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SmartRetail</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">🛒 SmartRetail</div>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('products')">Products</a></li>
+      <li><a onclick="showPage('cart')">Cart</a></li>
+      <li><a onclick="showPage('about')">About Us</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+      <li><a onclick="showPage('login')" id="loginLink">Login</a></li>
+      <li><a onclick="showPage('signup')" id="signupLink">Signup</a></li>
+      <li><a onclick="logout()" id="logoutBtn" style="display:none;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="active hero">
+    <h1>Welcome to SmartRetail</h1>
+    <p>Fresh products, great offers, easy shopping!</p>
+    <button onclick="showPage('products')">Shop Now</button>
+  </section>
+
+  <!-- Signup -->
+  <section id="signup" class="form-section">
+    <h2>Signup</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="semail" placeholder="Email">
+    <input id="spassword" type="password" placeholder="Password">
+    <input id="scpassword" type="password" placeholder="Confirm Password">
+    <button onclick="signup()">Register</button>
+    <p id="signupMsg"></p>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="form-section">
+    <h2>Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </section>
+
+  <!-- Products -->
+  <section id="products">
+    <h2>Products</h2>
+    <input id="searchBox" placeholder="Search products..." onkeyup="searchProducts()">
+    <div id="productList" class="grid"></div>
+  </section>
+
+  <!-- Cart -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <div id="cartList"></div>
+    <p id="cartTotal"></p>
+    <button onclick="showPage('billing')">Checkout</button>
+  </section>
+
+  <!-- Billing -->
+  <section id="billing">
+    <h2>Billing</h2>
+    <div id="billSummary"></div>
+    <button onclick="printBill()">Print Bill</button>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>SmartRetail is your trusted store for fresh groceries and essentials.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="form-section">
+    <h2>Contact Us</h2>
+    <input id="cname" placeholder="Name">
+    <input id="cemail" placeholder="Email">
+    <textarea id="cmsg" placeholder="Message"></textarea>
+    <button onclick="contactSubmit()">Send</button>
+    <p id="contactMsg"></p>
+  </section>
+</main>
+
+<footer>
+  <p>© 2026 SmartRetail | support@smartretail.com</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
