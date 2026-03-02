@@ -1,0 +1,112 @@
+.register {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff8e1;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.register h2 {
+  color: #ff6f00;
+  margin-bottom: 20px;
+}
+
+.register form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register label {
+  text-align: left;
+  font-weight: bold;
+  color: #333;
+}
+
+.register input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.register button {
+  padding: 12px;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.register button:hover {
+  background-color: #ff8f00;
+}
+
+.login-link {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.login-link a {
+  color: #ff6f00;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* 
+ .register {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #f0fff4;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.register h1 {
+  font-size: 2rem;
+  color: #2f855a;
+  margin-bottom: 1rem;
+}
+
+.register p {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.register-form input {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.register-form button {
+  background: #2f855a;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.register-form button:hover {
+  background: #276749;
+} */
