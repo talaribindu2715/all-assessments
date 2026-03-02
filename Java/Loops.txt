@@ -1,0 +1,105 @@
+A-Water Consumption
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[]args) {
+		Scanner sc=new Scanner(System.in);
+		int T,X,n,i;
+		T=sc.nextInt();
+		for(i=0;i<T;i++) {
+			X=sc.nextInt();
+			if(X>=2000) {
+				System.out.println("YES");
+			}
+			else {
+				System.out.println("NO");
+			}
+		}
+	}
+}
+
+C-I Can Use Both Hands!
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[]args) {
+		Scanner sc=new Scanner(System.in);
+		int T;
+		long L,R,M,pages,lines;
+		T=sc.nextInt();
+		while(T-->0) {
+			 L=sc.nextLong();
+			 R=sc.nextLong();
+			 M=sc.nextLong();
+			 pages=(M+L-1)/L;
+			 lines=M/R;
+			System.out.println(pages+lines);
+		}	
+	}
+}
+
+D-Chef and Stocks
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T= sc.nextInt();
+        while (T-- > 0) {
+            int days = sc.nextInt();
+            int totalProfit = 0;
+            int smallestProfit = Integer.MAX_VALUE;
+            for (int i = 0; i < days; i++) {
+                int profit = sc.nextInt();
+                totalProfit += profit;
+                if (profit < smallestProfit) {
+                    smallestProfit = profit;
+                }
+            }
+            int maxProfit = totalProfit - smallestProfit;
+            System.out.println(maxProfit);
+        }
+    }
+}
+
+E-Rearranging digits to get a multiple of 5
+
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        while (T-- > 0) {
+            int D = sc.nextInt();
+            String num = sc.next();
+            if (num.contains("0") || num.contains("5"))
+                System.out.println("Yes");
+            else
+                System.out.println("No");
+        }
+    }
+}
+
+F-The Old Saint And Three Questions
+
+import java.util.Scanner;
+public class Main {
+	public static void main(String[]args) {
+		Scanner sc=new Scanner(System.in);
+		int T,A1,B1;
+		T=sc.nextInt();
+		while(T-->0) {
+			A1=sc.nextInt()+sc.nextInt()+sc.nextInt();
+			B1=sc.nextInt()+sc.nextInt()+sc.nextInt();
+			if(A1==B1) {
+				System.out.println("Pass");
+			}
+			else {
+				System.out.println("Fail");
+			}
+		}
+	}
+}
+
+
+
