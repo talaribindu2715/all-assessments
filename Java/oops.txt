@@ -1,0 +1,82 @@
+1.Class and Object
+Problem Statement:  
+Create a class Car with attributes brand, model, and year. Create an
+object of this class and print its attributes
+
+import java.util.Scanner;
+class Car {
+    String brand;
+    String model;
+    int year;
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Car c = new Car();   
+        c.brand = sc.next();
+        c.model = sc.next();
+        c.year = sc.nextInt();
+        System.out.println("Brand: " + c.brand);
+        System.out.println("Model: " + c.model);
+        System.out.println("Year: " + c.year);
+    }
+}
+2. Inheritance
+Problem Statement:  
+Create a base class Animal with a method make_sound(). Derive a
+class Dog from Animal and override the method to print "Bark"
+
+class Animal {
+    void make_sound() {
+        System.out.println("Animal sound");
+    }
+}
+class Dog extends Animal {
+    void make_sound() {
+        System.out.println("Bark");
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Dog d = new Dog();
+        d.make_sound();
+    }
+}
+
+3. Polymorphism
+Problem Statement:  
+Create a class Shape with a method area(). Derive two classes Circle
+and Rectangle, overriding area() to calculate respective areas
+
+import java.util.Scanner;
+class Shape {
+    void area() {
+        System.out.println("Area");
+    }
+}
+class Circle extends Shape {
+    void area(int r) {
+        double result = 3.14 * r * r;
+        System.out.println("Area of Circle: " + result);
+    }
+}
+class Rectangle extends Shape {
+    void area(int l, int w) {
+        int result = l * w;
+        System.out.println("Area of Rectangle: " + result);
+    }
+}
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        sc.next();   // Circle
+        int r = sc.nextInt();
+        sc.next();   // Rectangle
+        int l = sc.nextInt();
+        int w = sc.nextInt();
+        Circle c = new Circle();
+        Rectangle rect = new Rectangle();
+        c.area(r);
+        rect.area(l, w);
+    }
+}
