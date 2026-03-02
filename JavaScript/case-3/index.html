@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HealthCare Clinic</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">🏥 HealthCare</div>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('doctors')">Doctors</a></li>
+      <li><a onclick="showPage('appointments')">Appointments</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+      <li><a onclick="showPage('login')" id="loginLink">Login</a></li>
+      <li><a onclick="showPage('signup')" id="signupLink">Signup</a></li>
+      <li><a onclick="logout()" id="logoutBtn" style="display:none;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="active hero">
+    <h1>Welcome to HealthCare Clinic</h1>
+    <p>Your trusted clinic for better health</p>
+    <button onclick="showPage('doctors')">View Doctors</button>
+  </section>
+
+  <!-- Signup -->
+  <section id="signup" class="form-section">
+    <h2>Signup</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="semail" placeholder="Email">
+    <input id="spassword" type="password" placeholder="Password">
+    <input id="scpassword" type="password" placeholder="Confirm Password">
+    <input id="sphone" placeholder="Contact Number">
+    <button onclick="signup()">Register</button>
+    <p id="signupMsg"></p>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="form-section">
+    <h2>Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </section>
+
+  <!-- Doctors -->
+  <section id="doctors">
+    <h2>Our Doctors</h2>
+    <input id="searchDoctor" placeholder="Search doctors..." onkeyup="searchDoctors()">
+    <div id="doctorList" class="grid"></div>
+  </section>
+
+  <!-- Appointments -->
+  <section id="appointments">
+    <h2>Book Appointment</h2>
+    <input id="aname" placeholder="Patient Name">
+    <select id="adoctor"></select>
+    <input id="adate" type="date">
+    <input id="atime" type="time">
+    <textarea id="areason" placeholder="Reason / Notes"></textarea>
+    <button onclick="bookAppointment()">Book</button>
+    <h3>My Appointments</h3>
+    <table id="apptTable" border="1" style="width:100%; text-align:center;">
+      <tr><th>Doctor</th><th>Date</th><th>Time</th><th>Reason</th><th>Action</th></tr>
+    </table>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>HealthCare Clinic has been serving patients with dedication and compassion since 2000.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="form-section">
+    <h2>Contact Us</h2>
+    <input id="cname" placeholder="Name">
+    <input id="cemail" placeholder="Email">
+    <textarea id="cmsg" placeholder="Message"></textarea>
+    <button onclick="contactSubmit()">Send</button>
+    <p id="contactMsg"></p>
+  </section>
+</main>
+
+<footer>
+  <p>📍 Address: 123 Health Street, City</p>
+  <p>🕒 Mon–Sat: 9 AM – 8 PM</p>
+  <p>📧 support@healthcare.com | ☎ 123-456-7890</p>
+  <p>© 2026 HealthCare Clinic</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
