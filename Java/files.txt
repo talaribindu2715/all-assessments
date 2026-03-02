@@ -1,0 +1,16 @@
+package oops;
+import java.io.*;
+public class person {
+	public static void main(String[]args) {
+		try {
+			File f=new File("C:\\Users\\kodur\\OneDrive\\Desktop\\TypeScript\\files");
+			FileWriter fw=new FileWriter(f);
+			BufferedWriter bw=new BufferedWriter(fw);
+			bw.write("this s written from stts");
+			bw.close();
+		}
+		catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+}
