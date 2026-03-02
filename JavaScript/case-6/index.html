@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>HRPro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">👔 HRPro</div>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('employees')">Employees</a></li>
+      <li><a onclick="showPage('attendance')">Attendance</a></li>
+      <li><a onclick="showPage('payroll')">Payroll</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+      <li><a onclick="showPage('login')" id="loginLink">Login</a></li>
+      <li><a onclick="showPage('signup')" id="signupLink">Signup</a></li>
+      <li><a onclick="logout()" id="logoutBtn" style="display:none;">Logout</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="active hero">
+    <h1>Welcome to HRPro</h1>
+    <p>Manage employees, attendance, and payroll with ease.</p>
+    <div id="stats"></div>
+  </section>
+
+  <!-- Signup -->
+  <section id="signup" class="form-section">
+    <h2>Signup</h2>
+    <input id="sname" placeholder="Full Name">
+    <input id="semail" placeholder="Email">
+    <input id="spassword" type="password" placeholder="Password">
+    <input id="scpassword" type="password" placeholder="Confirm Password">
+    <select id="srole">
+      <option value="Employee">Employee</option>
+      <option value="HR">HR</option>
+    </select>
+    <input id="sphone" placeholder="Contact Number">
+    <button onclick="signup()">Register</button>
+    <p id="signupMsg"></p>
+  </section>
+
+  <!-- Login -->
+  <section id="login" class="form-section">
+    <h2>Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpassword" type="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p id="loginMsg"></p>
+  </section>
+
+  <!-- Employees -->
+  <section id="employees">
+    <h2>Employees</h2>
+    <input id="searchEmp" placeholder="Search employees..." onkeyup="searchEmployees()">
+    <div id="employeeList"></div>
+  </section>
+
+  <!-- Attendance -->
+  <section id="attendance">
+    <h2>Attendance</h2>
+    <button onclick="markAttendance()">Mark Attendance</button>
+    <table id="attendanceTable" border="1" style="width:100%; text-align:center;">
+      <tr><th>Name</th><th>Date</th><th>Status</th></tr>
+    </table>
+  </section>
+
+  <!-- Payroll -->
+  <section id="payroll">
+    <h2>Payroll</h2>
+    <div id="payrollList"></div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About HRPro</h2>
+    <p>HRPro is designed to simplify HR tasks like employee management, attendance tracking, and payroll processing.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="form-section">
+    <h2>Contact HR</h2>
+    <input id="cname" placeholder="Name">
+    <input id="cemail" placeholder="Email">
+    <textarea id="cmsg" placeholder="Message"></textarea>
+    <button onclick="contactSubmit()">Send</button>
+    <p id="contactMsg"></p>
+  </section>
+</main>
+
+<footer>
+  <p>📍 Address: 123 Corporate Street, City</p>
+  <p>🕒 Mon–Fri: 9 AM – 6 PM</p>
+  <p>📧 hr@hrpro.com | ☎ 123-456-7890</p>
+  <p>© 2026 HRPro</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
