@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IPLStats</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="logo">🏏 IPLStats</div>
+    <ul>
+      <li><a onclick="showPage('home')">Home</a></li>
+      <li><a onclick="showPage('teams')">Teams</a></li>
+      <li><a onclick="showPage('players')">Players</a></li>
+      <li><a onclick="showPage('matches')">Matches</a></li>
+      <li><a onclick="showPage('points')">Points Table</a></li>
+      <li><a onclick="showPage('about')">About</a></li>
+      <li><a onclick="showPage('contact')">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <!-- Home -->
+  <section id="home" class="active hero">
+    <h1>Welcome to IPLStats</h1>
+    <p>Your one-stop hub for IPL teams, players, matches, and stats.</p>
+    <button onclick="showPage('teams')">Explore Teams</button>
+  </section>
+
+  <!-- Teams -->
+  <section id="teams">
+    <h2>IPL Teams</h2>
+    <input id="searchTeam" placeholder="Search teams..." onkeyup="searchTeams()">
+    <div id="teamList" class="grid"></div>
+  </section>
+
+  <!-- Players -->
+  <section id="players">
+    <h2>IPL Players</h2>
+    <input id="searchPlayer" placeholder="Search players..." onkeyup="searchPlayers()">
+    <div id="playerList" class="grid"></div>
+  </section>
+
+  <!-- Matches -->
+  <section id="matches">
+    <h2>Match Schedule</h2>
+    <div id="matchList"></div>
+  </section>
+
+  <!-- Points Table -->
+  <section id="points">
+    <h2>Points Table</h2>
+    <table id="pointsTable" border="1" style="width:100%; text-align:center;">
+      <tr><th>Team</th><th>Matches</th><th>Wins</th><th>Losses</th><th>Points</th></tr>
+    </table>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About IPL</h2>
+    <p>The Indian Premier League (IPL) is a professional Twenty20 cricket league in India, founded in 2008.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="form-section">
+    <h2>Contact Us</h2>
+    <input id="cname" placeholder="Name">
+    <input id="cemail" placeholder="Email">
+    <textarea id="cmsg" placeholder="Message"></textarea>
+    <button onclick="contactSubmit()">Send</button>
+    <p id="contactMsg"></p>
+  </section>
+</main>
+
+<footer>
+  <p>Official IPL Website | 📧 support@iplstats.com</p>
+  <p>© 2026 IPLStats</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
